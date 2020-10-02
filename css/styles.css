@@ -1,0 +1,112 @@
+.grid-wrapper {
+    /* Display a grid using this class */
+    display: grid; /* NOW we're offically using a grid template */
+    width: 100vw;
+    height: 100vh;
+    /* grid-templeta-rows ==gridrows sizes (can use fr=fraction or px=pixels)
+        grid-template-colums ==gridcolums sizes*/
+
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 1fr;  /* 1fr =~ 20-30px (depends on the screen)=*/ 
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas: 
+        "header         header      internalnav" /* coincides with 3 columns and 7 rows*/
+        "hcontent1      hcontent2   internalnav"
+        "content1       content2    externalnav"
+        "content1       content2    externalnav"
+        "content1       content2    socialmedia"
+        "content1       content2    socialmedia"
+        "footer         footer      footer";
+    }
+
+    .header {
+        grid-area: header;
+        background-color: gray;
+        display: block;
+    }
+
+    .header {
+        background-color: gray;
+        text-align: left;
+        margin: 2vh;
+       
+    }
+
+    .hcontent1{
+        grid-area: hcontent1;
+        text-align: left;
+        background-color: red;
+        margin-left: 1vw;
+        margin-right: .5vw;
+        padding: 2px;
+        display: block;
+     
+
+    }
+
+    .content1 {
+        grid-area: content1;
+        background-color: red;
+        margin-left: 1vw;
+        margin-right: .5vw;
+        display: block;
+       
+    }
+
+   .ratimage {
+        height: 150px;
+    }
+
+    .hcontent2 {
+        grid-area: hcontent2;
+        background-color: red;
+        margin-left: .5vw;
+        margin-right: 1vw;
+        display: block;
+
+    }
+
+    .content2 {
+        grid-area: content2;
+        background-color: red;
+        margin-left: .5vw;
+        margin-right: 1vw;
+        display: block;
+    }
+
+    .ducksimage  {
+        height: 150px;
+    }
+
+    .internalnav {
+        grid-area: internalnav;
+        background-color: blue;
+        margin-right: .5vw;
+        margin-top: 2vh;
+        display: block;
+    }
+    .externalnav {
+        grid-area: externalnav;
+        background-color: blue;
+        display: block;
+    }
+
+    .socialmedia {
+        grid-area: socialmedia;
+        background-color: blue;
+        display: block;
+
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: orange;
+        margin: 2vh;
+        display: block;
+
+    }
+
+
+
+
+
+
